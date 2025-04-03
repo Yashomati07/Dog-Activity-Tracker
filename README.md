@@ -36,7 +36,7 @@ The Dog Activity Tracker is a motion-based tracking system built on the ESP32-S3
 2. Upload the code to an ESP32 board (or run in simulation mode without hardware).
 3. Observe activity logs and classifications through Serial Monitor.
 
-> **Note**: Physical hardware was not used; data is simulated, and TensorFlow Lite integration remains as placeholders due to lack of a labeled dataset. But you can make some modifications in it and use on hardware setup also. If you want to know how please contact me.
+> **Note**: Physical hardware was not used; data is simulated, and TensorFlow Lite integration remains as placeholders due to lack of a labeled dataset.
 
 ## Future Work
 - **Hardware Integration**: Implement with real QMI8658 accelerometer/gyroscope.
