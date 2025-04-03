@@ -1,6 +1,5 @@
 # Dog-Activity-Tracker
-The Dog Activity Tracker is a motion-based tracking system built on the ESP32-S3 to monitor and classify a dog's activities in real-time. It uses an accelerometer + gyroscope (QMI8658) to detect movement and categorize activities into Resting, Walking, Running, and Playing.
-
+This project is a simulated Dog Activity Tracker built on the ESP32 platform. It uses simulated accelerometer and gyroscope data to classify a dog’s activities, such as Resting, Walking, Running, and Playing. This proof-of-concept demonstrates activity classification, low-power wake-on-motion, and efficient data storage using LittleFS.
 
 ## Features
 - **Simulated Motion Data**: Mimics accelerometer and gyroscope readings without physical sensors.
