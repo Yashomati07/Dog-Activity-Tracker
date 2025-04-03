@@ -1,40 +1,46 @@
 # Dog-Activity-Tracker
 The Dog Activity Tracker is a motion-based tracking system built on the ESP32-S3 to monitor and classify a dog's activities in real-time. It uses an accelerometer + gyroscope (QMI8658) to detect movement and categorize activities into Resting, Walking, Running, and Playing.
 
-##  Features  
 
- **Activity Classification** – Detects and categorizes movements  
- **Wake-on-Motion** – Saves power by entering deep sleep mode when inactive  
- **Data Storage with LittleFS** – Logs activity data in 10-minute intervals  
- **Time Synchronization** – Uses **NTP** for accurate timekeeping  
- **BLE Connectivity** – Syncs data with a mobile app (planned feature)  
- **TensorFlow Lite Integration** – Future support for ML-based activity classification  
+## Features
+- **Simulated Motion Data**: Mimics accelerometer and gyroscope readings without physical sensors.
+- **Wake-on-Motion**: ESP32 deep sleep and wake-up mechanism for power-efficient tracking.
+- **Time Synchronization**: Uses NTP to keep time accurate.
+- **Basic Activity Classification**: Simple activity classifier for foundational analysis.
+- **Data Storage**: Logs activity data to LittleFS in structured intervals.
 
-##  Tech Stack & Dependencies  
+## Project Components
+1. **Core Functionality & Sensor Simulation**: 
+   - Simulates accelerometer and gyroscope data using the `SimulatedQMI8658` class.
+2. **Wake-up Mechanism**: 
+   - Uses deep sleep with wake-on-motion and scheduled wake-ups every 2 minutes.
+3. **Time Management**: 
+   - Manages time via NTP and ESP32's RTC during deep sleep.
+4. **Activity Classification**:
+   - Basic classifier with placeholders for TensorFlow Lite integration, pending dataset availability.
+5. **Data Storage**: 
+   - Stores logs in a structured format using LittleFS.
 
-- **ESP32-S3** microcontroller  
-- **QMI8658** Accelerometer + Gyroscope  
-- **ESP32 Arduino Core (v2.0.14)**  
-- **LittleFS** (File storage)  
-- **TensorFlow Lite for ESP32** (Version TBD)  
-- **BLE & ArduinoOTA Libraries**  
+## Installation & Setup
+1. **Prerequisites**: Ensure Arduino IDE is set up for ESP32 with the required libraries:
+   - `ESP32 Arduino Core` (v2.0.14)
+   - `LittleFS` for ESP32
+   - `WiFi` for NTP sync
+2. **Code Structure**: 
+   - Place all `.h` and `.cpp` files in the same folder as the `.ino` file.
+3. **Simulated Motion**: Modify `SimulatedQMI8658` for custom motion patterns if needed.
+4. **NTP Configuration**: Customize NTP server settings in `TimeManager.cpp` if desired.
 
-##  Getting Started  
+## Usage
+1. Clone the repository and open the `.ino` file in Arduino IDE.
+2. Upload the code to an ESP32 board (or run in simulation mode without hardware).
+3. Observe activity logs and classifications through Serial Monitor.
 
-###  Prerequisites  
+> **Note**: Physical hardware was not used; data is simulated, and TensorFlow Lite integration remains as placeholders due to lack of a labeled dataset. But you can make some modifications in it and use on hardware setup also. If you want to know how please contact me.
 
-Ensure you have the following installed:  
-
-- **Arduino IDE** (latest version)  
-- **ESP32 Board Package** (v2.0.14)  
-- **Required Libraries:**  
-  - `ESP32 Arduino Core`  
-  - `LittleFS`  
-  - `TensorFlow Lite for ESP32`  
-  - `BLE`  
-  - `ArduinoOTA`  
-
-###  Installation Steps  
+## Future Work
+- **Hardware Integration**: Implement with real QMI8658 accelerometer/gyroscope.
+- **TensorFlow Lite Model**: Integrate a trained model for activity classification once a labeled dataset is available.
 
 1. **Clone this repository**  
    ```bash
