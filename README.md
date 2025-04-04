@@ -29,11 +29,6 @@ The Dog Activity Tracker uses:
 - BLE (for mobile sync - optional)
 - ArduinoOTA (for over-the-air updates - optional)
 
-### Future Improvements
-- Integrate real TensorFlow Lite model for smarter activity recognition
-- BLE support for syncing with a mobile app
-- Real sensor integration for real-time tracking
-- Cloud sync functionality
 
 ---
 
