@@ -4,7 +4,7 @@ A project that monitors a dog's activity using an ESP32 microcontroller, a simul
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 The Dog Activity Tracker uses:
 
@@ -15,10 +15,13 @@ The Dog Activity Tracker uses:
 
 ---
 
-## ⚙️ Requirements
+##  Requirements
 
-### Hardware
-- ESP32-S3 microcontroller (or compatible ESP32 board)
+### Hardware:
+- ESP32-S3 microcontroller  
+- QMI8658 Accelerometer + Gyroscope module  
+- LiPo Battery + Charging Circuit  
+- LCD Screen (for output visualization)  
 
 ### Libraries / Dependencies
 - ESP32 Arduino Core (v2.0.14)
@@ -26,9 +29,15 @@ The Dog Activity Tracker uses:
 - BLE (for mobile sync - optional)
 - ArduinoOTA (for over-the-air updates - optional)
 
+### Future Improvements
+- Integrate real TensorFlow Lite model for smarter activity recognition
+- BLE support for syncing with a mobile app
+- Real sensor integration for real-time tracking
+- Cloud sync functionality
+
 ---
 
-## 🚀 Setup
+##  Setup
 
 1.**Clone Repository**
    ```bash
